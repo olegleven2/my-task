@@ -1,0 +1,16 @@
+<div class="indication-wp">
+
+  <app-variable-render
+  [firstCount]="firstCount$ | async"
+  [secondCount]="secondCount$ | async"
+  ></app-variable-render>
+
+  <div class="input-wp">
+    <input
+      type="number"
+      [(ngModel)]="inputValue"
+      [ngClass]="{'red-border': inputValue < 0, 'blue-border': inputValue >= 0}"
+    >
+  </div>
+
+</div>
